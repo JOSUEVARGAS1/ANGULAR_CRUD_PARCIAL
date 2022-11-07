@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3>{{ titulo }}</h3><br>
+
+          <span *ngIf="submitted && createprocedencia.invalid" class="badge badge-danger" style="color: red;">CAMPOS OBLIGATORIO</span>
+          <form [formGroup]="createprocedencia"(ngSubmit)="agregareditarprocedencia()">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control"
+                formControlName="Vendedor"
+                placeholder="Vendedor:">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control"
+                formControlName="Procedencia"
+                placeholder="Procedencia:">
+              </div>
+            </div>
+            <input type="text" class="form-control -1g mt-3"
+            formControlName="Descripcion"
+            placeholder="Descripcion:"><br>
+            <button type="text" class="btn btn-secondary btn-1g " style="margin-right:20px ;" routerLink="lista-procedencia" >Volver</button>
+            <button type="submit" class="btn btn-dark btn-1g">Agregar</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
